@@ -1,0 +1,139 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(195, 219, 211);
+    background-image: url('../img/bg.jpg');
+    background-size: auto contain;
+    color: whitesmoke;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 12px;
+}
+/* 
+font-family: 'Fira Mono', monospace;
+font-family: 'Special Elite', cursive;
+font-family: 'Titillium Web', sans-serif;
+*/
+header {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    
+}
+/* para telas maiores que 500 */
+@media (min-width: 500px) {
+    body {
+        font-size: 14px;
+    }
+}
+.menu {
+    background-color: rgb(58, 83, 58);
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+.menu ul {
+    display: flex;    
+    justify-content: space-around;
+}
+.menu li {
+    font-weight: bold;
+    list-style: none;
+    text-transform: uppercase;
+}
+.menu a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color: rgb(73, 102, 73);
+}
+.site-title, .site-subtitle {
+    color:rgb(32, 51, 33);
+    font-family: 'Special Elite', cursive;
+    text-align: center;
+}
+.site-title {
+    border-bottom: solid 1px rgb(42, 88, 75);
+    font-size: 5em;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.site-subtitle {
+    font-size: 4em;
+}
+@media(min-width: 600px) {
+    .site-title {
+        font-size: 7em;
+    }
+    .site-subtitle {
+        font-size: 4em;
+    }
+}
+.contato, .portfolio {
+    padding: 2em;
+    padding-top:15vh;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: rgb(106, 136, 79);
+}
+.contato {
+    background-color: rgb(143, 175, 115);
+}
+.contato h2, .portfolio h2 {
+    font-family: 'Fira Mono', monospace;
+    font-size: 2em;
+    margin-bottom: 1.1em;
+}
+.grid {
+    display: grid;
+    gap: 2em;
+    width: 100%; height: 100%;
+}
+.contato grid {
+    grid-template-columns: repeat(2, auto);
+}
+.img-portfolio {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    
+}
+@media(min-width: 800px) {
+    .portfolio .grid {
+        grid-template-columns: repeat(3, auto);
+    }    
+    .img-portfolio {
+        width: 240px; height: 240px;
+    }
+}
+@media(min-width: 980px) {
+    .portfolio .grid {
+        align-content: center;
+        grid-template-columns: repeat(4, auto);
+        height: calc(100vh - 15vh - 2em - 2em - 1.1em);
+    }
+    .contato .grid {
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        align-content: center;
+        height: 60vh;
+    }
+    .img-portfolio {
+        width: 300px; height: 300px;
+        border-radius: 20%;
+    }
+    .grid figcaption {
+        font-size: 1.3em;
+    }
+    
+}
+.portfolio figure {
+    text-align: center;
+}
+.contato a {
+    color: whitesmoke;
+    font-size: 6em;
+    text-decoration: none;
+    display: block;
+}
